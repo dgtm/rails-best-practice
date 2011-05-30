@@ -18,5 +18,7 @@ end
 {:country=>"USA",:city => "NY", :user_id => User.first.id},
 {:country=>"Canada",:city => "AB", :user_id => User.last.id}
 ].each do |attr|
-Address.finf_or_create_by_user_id(attr)
+Address.find_or_create_by_user_id(attr)
 end
+
+Post.create(:title => "Hello World", :text => "My first blog post.", :user_id => User.first.id)

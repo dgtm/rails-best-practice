@@ -9,8 +9,8 @@
   <body>
     <%= flash[:notice] %>
     <% if logged_in? %>
-    Logged in as <%= current_user.login %> |
-      <%= link_to "New Post", new_user_post_path(current_user) %>
+        Logged in as <%= current_user.login %> |
+        <%= link_to "New Post", new_user_post_path(current_user) %>
     <% else %>
       <%= link_to "Login", login_path %>
     <% end %>
